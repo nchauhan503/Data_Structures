@@ -21,5 +21,10 @@ public class Main {
         array = arrays.SimpleArray();
         InsertionSort insertionSort = new InsertionSort();
         insertionSort.sortArray(array);
+
+        //Shell Sort
+        array = arrays.SimpleArray();
+        ShellSort shellSort = new ShellSort();
+        shellSort.sortArray(array);
     }
 }

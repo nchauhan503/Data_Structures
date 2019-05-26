@@ -30,16 +30,4 @@ public class InsertionSort {
         return insertion;
     }
 
-    public static void swap(int[] ary, int i, int j){
-
-        if ( i == j){
-            return ;
-        }
-
-        int temp = ary[i];
-        ary[i] = ary[j];
-        ary[j] = temp;
-
-        return;
-    }
 }
