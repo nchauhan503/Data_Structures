@@ -13,16 +13,17 @@ public class InsertionSort {
 
         for (int i = 1; i < unpartitionedIndex; i++){
             int target = insertion[i];
-            if (insertion[i - 1] > insertion[i]){
-                for ( int j = i ; j > 0 ; j--){
-                    if( insertion[j - 1] > insertion[j]) {
-                        insertion[j] = insertion[j - 1];
+            int index = 0;
+            for ( int j = i ; j > 0 ; j--){
+                if( insertion[j - 1] > target) {
+                    insertion[j] = insertion[j - 1];
 
-                    }
+                }else{
+                    index = j;
+                    break;
                 }
             }
-            insertion[i - 1] = target;
-
+            insertion[index] = target;
         }
 
         System.out.println("\nOutput for insertion Sort: " + Arrays.toString(insertion));
