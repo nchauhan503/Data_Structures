@@ -1,6 +1,8 @@
 package com.sort;
 
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -26,5 +28,12 @@ public class Main {
         array = arrays.SimpleArray();
         ShellSort shellSort = new ShellSort();
         shellSort.sortArray(array);
+
+        //Merge Sort
+        array = arrays.SimpleArray();
+        System.out.println("\n Input for Merge Sort: " + Arrays.toString(array));
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.mergeSort(array,0,array.length);
+        System.out.println("\nOutput for Merge Sort: " + Arrays.toString(array));
     }
 }
