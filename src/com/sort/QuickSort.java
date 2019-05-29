@@ -25,8 +25,6 @@ public class QuickSort {
 
             //Empty loop
             while(i < j && ary[--j] > pivot){
-                //System.out.println("I: " + i);
-                //System.out.println("J: " + j);
             }
 
             if (i < j){
@@ -35,8 +33,6 @@ public class QuickSort {
 
             //Empty loop
             while(i < j && ary[++i] < pivot){
-                //System.out.println("I: " + i);
-                //System.out.println("J: " + j);
             }
 
             if (i < j){
