@@ -43,5 +43,12 @@ public class Main {
         quickSort.quickSort(array,0,array.length);
         System.out.println("\nOutput for Quick Sort: " + Arrays.toString(array));
 
+        //Counting Sort
+        array = arrays.PlainArray();
+        System.out.println("\n Input for Counting Sort: " + Arrays.toString(array));
+        CountingSort countingSort = new CountingSort();
+        countingSort.countingSort(array);
+        System.out.println("\nOutput for Counting Sort: " + Arrays.toString(array));
+
     }
 }
