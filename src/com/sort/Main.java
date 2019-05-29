@@ -40,7 +40,7 @@ public class Main {
         array = arrays.SimpleArray();
         System.out.println("\n Input for Quick Sort: " + Arrays.toString(array));
         QuickSort quickSort = new QuickSort();
-        quickSort.quickSort(array);
+        quickSort.quickSort(array,0,array.length);
         System.out.println("\nOutput for Quick Sort: " + Arrays.toString(array));
 
     }

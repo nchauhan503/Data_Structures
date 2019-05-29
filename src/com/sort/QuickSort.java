@@ -2,23 +2,50 @@ package com.sort;
 
 public class QuickSort {
 
-    public static void quickSort(int[] ary){
+    public static void quickSort(int[] ary, int start, int end){
 
-        int pivot = ary[0];
-        int j = ary.length; // end
-        int i = 0; // start
-
-        while ( i < j){
-            if (ary[--j] < pivot){
-                ary[i++] = ary[j];
-            }
-            if(ary[i] > pivot){
-                ary[j--] = ary[i];
-            }
+        if ( end - start < 2){
+            return;
         }
 
-        ary[i] = pivot;
-        //return ary;
+        int pivotIndex = quick(ary,start,end);
+
+        quickSort(ary,start, pivotIndex);
+        quickSort(ary,pivotIndex + 1, end);
+
+    }
+
+    public static int quick(int[] ary, int start,int end){
+
+        int pivot = ary[start];
+        int i = start; // start
+        int j = end; // end
+
+        while ( i < j){
+
+            //Empty loop
+            while(i < j && ary[--j] > pivot){
+                //System.out.println("I: " + i);
+                //System.out.println("J: " + j);
+            }
+
+            if (i < j){
+                ary[i] = ary[j];
+            }
+
+            //Empty loop
+            while(i < j && ary[++i] < pivot){
+                //System.out.println("I: " + i);
+                //System.out.println("J: " + j);
+            }
+
+            if (i < j){
+                ary[j] = ary[i];
+            }
+        }
+        ary[j] = pivot;
+        return j;
+
     }
 }
 
