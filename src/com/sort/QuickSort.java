@@ -24,16 +24,14 @@ public class QuickSort {
         while ( i < j){
 
             //Empty loop
-            while(i < j && ary[--j] > pivot){
-            }
+            while(i < j && ary[--j] > pivot);
 
             if (i < j){
                 ary[i] = ary[j];
             }
 
             //Empty loop
-            while(i < j && ary[++i] < pivot){
-            }
+            while(i < j && ary[++i] < pivot);
 
             if (i < j){
                 ary[j] = ary[i];
