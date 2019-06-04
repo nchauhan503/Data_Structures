@@ -29,4 +29,17 @@ public class Array {
 
         return ary;
     }
+
+    public int[] RadixArray(){
+        int[] ary = new int[6];
+
+        ary[0] = 4725;
+        ary[1] = 5729;
+        ary[2] = 1330;
+        ary[3] = 4586;
+        ary[4] = 8792;
+        ary[5] = 1594;
+
+        return ary;
+    }
 }

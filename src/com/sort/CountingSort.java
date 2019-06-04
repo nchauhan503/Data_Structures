@@ -4,8 +4,8 @@ public class CountingSort {
 
     public static int[] countingSort(int[] ary){
 
-        int min = 1000000;
-        int max = 0;
+        int min = ary[0];
+        int max = ary[ary.length-1];
 
         for (int i = 0 ; i < ary.length ; i++){
             if ( ary[i] < min){

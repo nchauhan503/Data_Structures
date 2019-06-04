@@ -30,4 +30,21 @@ public class InsertionSort {
         return insertion;
     }
 
+    public void recursionInsertionSort(int[] ary, int start){
+
+        if(start < 2){
+            return;
+        }
+
+        recursionInsertionSort(ary,start -1);
+
+        int i;
+        int target = ary[start - 1];
+        for ( i = start - 1; i > 0 && ary[i - 1] > target; i--){
+            ary[i] = ary[i - 1];
+        }
+        ary[i] = target;
+
+    }
+
 }
