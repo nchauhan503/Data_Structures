@@ -93,4 +93,34 @@ public class EmployeeDoubleLinkedList {
             current = current.getNext();
         }
     }
+
+    public void addBefore(Employee add, Employee before){
+        EmployeeDoubleNode current = head;
+
+        while(current != null){
+
+            if (current.getEmployee().equals(before)){
+                if ( head.getEmployee().equals(tail.getEmployee()) || head.getEmployee().equals(before)){
+                    //only one element or adding at the head level, addHead method will take care of it
+                    addHead(add);
+                }else{
+                    //adding between head and tail
+                    EmployeeDoubleNode toAdd = new EmployeeDoubleNode(add);
+                    EmployeeDoubleNode beforeAdd = current.getPrevious();
+
+                    beforeAdd.setNext(toAdd);
+                    toAdd.setPrevious(beforeAdd);
+
+                    toAdd.setNext(current);
+
+                    current.setPrevious(toAdd);
+                    size++;
+                    break;
+
+                }
+            }
+
+            current = current.getNext();
+        }
+    }
 }
