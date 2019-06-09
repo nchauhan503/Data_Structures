@@ -39,6 +39,7 @@ public class Main {
         System.out.println("\n");
         doubleLinkedList.printLinkedList();
 
+        //Challenge 1 starts
         System.out.println("\n Add Before");
         doubleLinkedList.addBefore(toAdd,two);
         doubleLinkedList.printLinkedList();
@@ -46,6 +47,7 @@ public class Main {
         System.out.println("\n Add Before Head");
         doubleLinkedList.addBefore(toAddHead,four);
         doubleLinkedList.printLinkedList();
+        // Challenge 1 ends
 
         // Remove
         System.out.println("\n Removing some elements");
@@ -57,6 +59,28 @@ public class Main {
 
 
         doubleLinkedList.printLinkedList();
+
+        //Challenge 2 starts
+        System.out.println("\n Challenge 2\n");
+        Integer a = 1;
+        Integer b = 2;
+        Integer c = 3;
+        Integer d = 4;
+        Integer e = 5;
+
+        IntegerLinkedList listInt = new IntegerLinkedList();
+        listInt.insertSorted(c);
+        listInt.printList();
+        listInt.insertSorted(b);
+        listInt.printList();
+        listInt.insertSorted(a);
+        listInt.printList();
+        listInt.insertSorted(e);
+        listInt.printList();
+        listInt.insertSorted(d);
+        listInt.printList();
+
+        // Challenge 2 ends
 
     }
 
