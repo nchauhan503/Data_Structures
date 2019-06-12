@@ -78,4 +78,10 @@ public class IntegerLinkedList {
         System.out.println("null");
     }
 
+
+    //Reverse the LinkedList
+    public IntegerNode getHead(){
+        return head;
+    }
+
 }

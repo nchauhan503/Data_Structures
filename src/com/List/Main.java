@@ -69,6 +69,11 @@ public class Main {
         Integer e = 5;
 
         IntegerLinkedList listInt = new IntegerLinkedList();
+        listInt.insertSorted(1);
+        listInt.insertSorted(2);
+        listInt.insertSorted(3);
+
+
         listInt.insertSorted(c);
         listInt.printList();
         listInt.insertSorted(b);
@@ -82,7 +87,29 @@ public class Main {
 
         // Challenge 2 ends
 
+        //Reverse the linkedList
+        System.out.println("\n Reverse LinkedList");
+        IntegerNode newHead = reverseLinkedList(listInt.getHead());
+        while ( newHead != null) {
+            System.out.println(newHead.getValue() + "\n");
+            newHead = newHead.getNext();
+        }
+
     }
+
+    private static IntegerNode reverseLinkedList(IntegerNode node) {
+
+        if (node.getNext() == null) {
+            return node;
+        }
+
+        IntegerNode ret = reverseLinkedList(node.getNext());
+
+        node.getNext().setNext(node);
+        node.setNext(null);
+        return ret;
+    }
+
 
 
 }
