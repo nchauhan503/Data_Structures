@@ -1,5 +1,7 @@
 package com.Stack;
 
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -48,6 +50,16 @@ public class Main {
         ll.printLinkedList();
         ll.pop();
         ll.printLinkedList();
+
+
+        // Java Util Class
+        LinkedList stack = new LinkedList<Employee>();
+        stack.push(one);
+        stack.peek();
+        stack.push(two);
+        stack.pop();
+
+        System.out.println("\n Java Util Class Imp:" + stack.toString());
 
 
     }
