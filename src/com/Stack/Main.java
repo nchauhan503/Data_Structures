@@ -59,8 +59,52 @@ public class Main {
         stack.push(two);
         stack.pop();
 
+
         System.out.println("\n Java Util Class Imp:" + stack.toString());
 
 
+        //Stack Session Challenge Question
+        // should return true
+        System.out.println(checkForPalindrome("abccba"));
+        // should return true
+        System.out.println(checkForPalindrome("Was it a car or a cat I saw?"));
+        // should return true
+        System.out.println(checkForPalindrome("I did, did I?"));
+        // should return false
+        System.out.println(checkForPalindrome("hello"));
+        // should return true
+        System.out.println(checkForPalindrome("Don't nod"));
+        // should return true
+        System.out.println(checkForPalindrome("nitin"));
+
+    }
+
+    public static boolean checkForPalindrome(String string) {
+
+        System.out.println("\nChecking for string:" + string);
+
+        if(string == null || string == ""){
+            return false;
+        }
+
+        LinkedList stringLinkedList = new LinkedList<Character>();
+
+
+        string = string.replaceAll("[^A-Za-z]+", "").toUpperCase();
+
+        for ( int i = 0; i < string.length();i++){
+            stringLinkedList.push(string.charAt(i));
+        }
+
+        for ( int i = 0; i < string.length();i++){
+
+            if(!stringLinkedList.peek().equals(string.charAt(i))){
+                return false;
+            }
+            stringLinkedList.pop();
+        }
+
+
+        return true;
     }
 }
