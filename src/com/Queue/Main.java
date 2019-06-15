@@ -23,5 +23,29 @@ public class Main {
         arrayImpl.deQueue();
         arrayImpl.deQueue();
         arrayImpl.peek();
+
+        //Circular array implementation
+        System.out.println("\n Circular Array Queue Implementation");
+        CircularArrayImpl circularArrayImpl = new CircularArrayImpl(5);
+
+        circularArrayImpl.enQueue(one);
+
+        circularArrayImpl.enQueue(two);
+
+        circularArrayImpl.deQueue();
+
+        circularArrayImpl.deQueue();
+        circularArrayImpl.deQueue();
+        circularArrayImpl.peek();
+
+        circularArrayImpl.enQueue(three);
+        circularArrayImpl.enQueue(four);
+        circularArrayImpl.enQueue(five);
+        circularArrayImpl.peek();
+        circularArrayImpl.enQueue(toAdd);
+        circularArrayImpl.enQueue(toAddHead);
+        circularArrayImpl.peek();
+
+        circularArrayImpl.printQueue();
     }
 }
